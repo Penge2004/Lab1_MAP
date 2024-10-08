@@ -1,6 +1,6 @@
 import java.text.DecimalFormat;
 
-public class UniversityGrading {
+public class UniversityGrading_ex1 {
     public int[] failedNotes(int[] grades){
         int[] failed = new int[0];
         for(int i = 0; i < grades.length; i++){
