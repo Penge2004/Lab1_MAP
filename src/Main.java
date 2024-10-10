@@ -38,5 +38,20 @@ class Main {
         int[] a_div = new int[]{1,6,0,0};
         int b_div = 2;
         System.out.println(Arrays.toString(bigNumber.divide(a_div,b_div)));
+        System.out.println();
+
+        Elektronik_Shop_ex4 elektronik = new Elektronik_Shop_ex4();
+        int[] keyBoards = new int[]{40,35,70,15,45};
+        System.out.println(elektronik.cheapestKeyboard(keyBoards));
+        keyBoards = new int[]{15,10,20,35};
+        int[] usbs = new int[]{20,15,40,15};
+        System.out.println(elektronik.mostExpensiveItem(keyBoards,usbs));
+        System.out.println(elektronik.mostExpensiveAffordableUsb(usbs,25));
+        keyBoards = new int[]{40,50,60};
+        usbs = new int[]{8,12};
+        System.out.println(elektronik.maxExpence(keyBoards,usbs,60));
+        keyBoards = new int[]{60};
+        System.out.println(elektronik.maxExpence(keyBoards,usbs,60));
+
     }
 }
