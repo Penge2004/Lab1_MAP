@@ -60,8 +60,44 @@ public class BigNumber_ex3 {
     }
 
     public int[] multiply(int[] a, int b) {
-        int[ ] result = new int[a.length];
+        int[] result = new int[a.length];
+        int carryFlag = 0;
+        for(int i=a.length-1; i>=0; i--) {
+            int multip = a[i] * b;
+            result[i] = multip % 10 + carryFlag;
+            carryFlag = multip / 10;
 
+        }
+        if (carryFlag != 0) {
+            int[] temp = new int[a.length+1];
+            temp[0] = carryFlag;
+            for (int i = 0; i < a.length; i++)
+                temp[i+1] = result[i];
+            result = temp;
+        }
+
+        return result;
+    }
+
+    public int[] divide(int[] a, int b) {
+        int[] result = new int[a.length];
+        int carryFlag = 0;
+        for (int i=0;i<a.length;i++) {
+            result[i] = (10*carryFlag + a[i])/b;
+            int multiplyBack = result[i] * b;
+            carryFlag = (10*carryFlag + a[i]) - multiplyBack;
+        }
+        int detectZero = 0;
+        while(result[detectZero] == 0) {
+            detectZero++;
+        }
+        if (detectZero != 0) {
+            int[] temp = new int[a.length-detectZero];
+            for(int i = 0; i < a.length-detectZero; i++) {
+                temp[i] = result[detectZero+i];
+            }
+            result = temp;
+        }
         return result;
     }
 }

@@ -28,5 +28,15 @@ class Main {
 //        int[] a_sub = new int[]{1,1,0,0,0,0,5,0,0};
 //        int[] b_sub = new int[]{1,0,0,0,0,0,6,0,0};
         System.out.println(Arrays.toString(bigNumber.subtract(a_sub,b_sub)));
+        System.out.println();
+//        int[] a_mul = new int[]{2,3,6,0,0,0,0,0,0};
+        int[] a_mul = new int[]{8,0,0};
+        int b_mul = 2;
+        System.out.println(Arrays.toString(bigNumber.multiply(a_mul,b_mul)));
+        System.out.println();
+//        int[] a_div = new int[]{2,3,6,0,0,0,0,0,0};
+        int[] a_div = new int[]{1,6,0,0};
+        int b_div = 2;
+        System.out.println(Arrays.toString(bigNumber.divide(a_div,b_div)));
     }
 }
