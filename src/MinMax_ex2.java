@@ -20,6 +20,9 @@ public class MinMax_ex2 {
     }
 
     public int minimalSum(int[] numbers){
+        /*
+        * The minimal sum with n-1 elements
+        * */
         int maxNr = max(numbers);
         int sum = 0;
         for(int i = 0; i < numbers.length; i++)
@@ -28,6 +31,9 @@ public class MinMax_ex2 {
     }
 
     public int maximalSum(int[] numbers){
+        /*
+         * The maximal sum with n-1 elements
+         * */
         int minNr = min(numbers);
         int sum = 0;
         for(int i = 0; i < numbers.length; i++)

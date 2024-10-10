@@ -1,6 +1,9 @@
 import java.text.DecimalFormat;
 
 public class UniversityGrading_ex1 {
+    /*
+    * returns all the grades below 40 -> the failed grades
+    * */
     public int[] failedNotes(int[] grades){
         int[] failed = new int[0];
         for(int i = 0; i < grades.length; i++){
@@ -12,6 +15,9 @@ public class UniversityGrading_ex1 {
     }
 
     private int[] append(int newElem, int[] oldArray){
+        /*
+        A methode to append to an array
+        */
         int[] newArray = new int[oldArray.length + 1];
         for(int i = 0; i < oldArray.length; i++){
             newArray[i] = oldArray[i];
@@ -21,6 +27,9 @@ public class UniversityGrading_ex1 {
     }
 
     public double average(int[] grades){
+        /*
+        * Calculates the average grade from an array of grades
+        * */
         int sum = 0;
         for(int i = 0; i < grades.length; i++){
             sum += grades[i];
@@ -33,6 +42,9 @@ public class UniversityGrading_ex1 {
     }
 
     public int[] round(int[] grades){
+        /*
+        * Rounds the grades that end to 3,4,8,9 and are greater than 38
+        * */
         int[] newArray = new int[grades.length];
         for(int i = 0; i < grades.length; i++){
             if (grades[i] < 38)
@@ -46,6 +58,9 @@ public class UniversityGrading_ex1 {
     }
 
     private int roundToFive(int number){
+        /*
+        * A methode for the "round" function that rounds to the nearest multiple of 5
+        * */
         int reminder = number % 5;
         if (reminder == 0)
             return number;
@@ -53,6 +68,9 @@ public class UniversityGrading_ex1 {
     }
 
     public int maxGradeAfterRound(int[] grades){
+        /*
+        * The biggest grade of the array
+        * */
         int max = Integer.MIN_VALUE;
         grades = round(grades);
         for(int i = 0; i < grades.length; i++){
